@@ -12,7 +12,7 @@ const init = async () => {
 
   server.route({
     method: "POST",
-    path: "/search",
+    path: "/api/search",
     options: {
       validate: {
         payload: Joi.object({
@@ -27,7 +27,7 @@ const init = async () => {
 
   server.route({
     method: "GET",
-    path: "/ping",
+    path: "/api/ping",
     handler: () => {
       return {
         statusCode: 204,
