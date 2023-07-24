@@ -25,6 +25,16 @@ const init = async () => {
     },
   });
 
+  server.route({
+    method: "GET",
+    path: "/ping",
+    handler: () => {
+      return {
+        statusCode: 204,
+      };
+    },
+  });
+
   await server.start();
   console.log("Server running on %s", server.info.uri);
 };
